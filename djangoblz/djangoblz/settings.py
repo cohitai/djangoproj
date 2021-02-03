@@ -73,12 +73,27 @@ WSGI_APPLICATION = 'djangoblz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        "CLIENT": {
+           "name": 'Livingdocs',
+           "host": "mongodb+srv://cohitai:malzeit1984@blz-livingdocs.ufrty.mongodb.net/Livingdocs?retryWrites=true&w=majority",
+           "username": 'cohitai',
+           "password": 'malzeit1984',
+           "authMechanism": "SCRAM-SHA-1",
+        }, 
     }
 }
+
+
 
 
 # Password validation
@@ -103,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de'
 
 TIME_ZONE = 'UTC'
 
