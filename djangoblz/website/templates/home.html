@@ -1,6 +1,9 @@
 <h1> Berliner Zeitung's articles </h1>
 
 {%for item in all %}
-    <p> {{item}} </p>
+    Author: {{item.author}} <br/>
+    Date: {{item.publishdate}} <br/>
+    <p> {{item}} </p> <br/><br/>
+    <hr>
 
 {%endfor%}
