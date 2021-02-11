@@ -90,8 +90,20 @@ DATABASES = {
            "username": 'cohitai',
            "password": 'malzeit1984',
            "authMechanism": "SCRAM-SHA-1",
-        }, 
+        }
+    },
+    'djangodb': {
+        'ENGINE': 'djongo',
+        "CLIENT": {
+           "name": 'Livingdocs',
+           "host": "mongodb+srv://cohitai:malzeit1984@articles.slsgc.mongodb.net/Livingdocs?retryWrites=true&w=majority",
+           "username": 'cohitai',
+           "password": 'malzeit1984',
+           "authMechanism": "SCRAM-SHA-1",
+        } 
     }
+
+
 }
 
 
